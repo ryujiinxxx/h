@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><title>Aktualna data i godzina to wszystko wina tuska</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;background:#f0f8ff;font-family:arial,bold;text-align:center;font-size:30px}</style></head><body><h1>Aktualna data i godzina:</h1><p id="currentDateTime"></p><script>// Pobierz element HTML, który będzie wyświetlał datę i godzinę
+      const currentDateTime = document.getElementById('currentDateTime');
+      // Funkcja, która będzie aktualizować datę i godzinę co sekundę
+      function updateDateTime() {
+        // Utwórz obiekt daty
+        const now = new Date();
+        // Pobierz aktualną datę i godzinę
+        const date = now.toLocaleDateString();
+        const time = now.toLocaleTimeString();
+        // Ustaw tekst elementu HTML na aktualną datę i godzinę
+        currentDateTime.textContent = `${date} ${time}`;
+      }
+      // Wywołaj funkcję updateDateTime() co sekundę
+      setInterval(updateDateTime, 0);</script></body></html>

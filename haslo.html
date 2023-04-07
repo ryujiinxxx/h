@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+          <head>
+                    <title>Wprowadź hasło</title>
+                    <style>
+                              body {
+                                        background-color: white;
+                                        color: black;
+                                        text-align: center;
+                                        font-size: 24px;
+                                        padding-top: 100px;
+                              }
+
+                              #password-input {
+                                        font-size: 24px;
+                                        padding: 10px;
+                              }
+                    </style>
+          </head>
+          <body>
+                    <label for="password-input">Wprowadź hasło:</label>
+                    <input type="password" id="password-input">
+                    <script>
+                              document.getElementById("password-input").addEventListener("keydown", function(event) {
+                                        if (event.key === "Enter") {
+                                                  if (event.target.value === "2137") {
+                                                            document.body.style.backgroundImage = "url('https://b.allegroimg.com/s512/03130d/c6552a854e4394c2128f544e208b/WOREK-PLECAK-NADRUK-JAN-PAWEL-II-PAPIEZ-POLAK')";
+                                                  } else {
+                                                            alert("Nieprawidłowe hasło!");
+                                                            document.body.style.backgroundColor = "white";
+                                                  }
+                                        }
+                              });
+                    </script>
+          </body>
+</html>

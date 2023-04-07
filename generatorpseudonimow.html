@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+          <head>
+                    <meta charset="UTF-8">
+                    <title>Generator nicków</title>
+          </head>
+          <body>
+                    <h1>Generator pseudonimów</h1>
+                    <p>Kliknij poniższy przycisk, aby wygenerować pseudonim:</p>
+                    <button onclick="generateNickname()">Generuj pseudonim</button>
+                    <br>
+                    <br>
+                    <h2 id="nickname"></h2>
+                    <script>
+                              function generateNickname() {
+                                        const adjectives = ["Zielony", "Szybki", "Wielki", "Mały", "Czerwony", "Niebieski", "Złoty", "Szary", "Biały", "Ciemny", "Mocny", "Malowany", "Kibelkowy"];
+                                        const nouns = ["Smok", "Wąż", "Mysz", "Orzeł", "Lew", "Tygrys", "Lama", "Pingwin", "Koń", "Kangur", "Smok", "Wąż", "Tusk", "Orzeł", "Lew", "Tygrys", "niewiem", "Kloc", "Krowiec", "Jajec"];
+                                        const adjectiveIndex = Math.floor(Math.random() * adjectives.length);
+                                        const nounIndex = Math.floor(Math.random() * nouns.length);
+                                        const adjective = adjectives[adjectiveIndex];
+                                        const noun = nouns[nounIndex];
+                                        document.getElementById("nickname").innerHTML = adjective + " " + noun;
+                              }
+                    </script>
+          </body>
+</html>

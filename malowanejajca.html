@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Zmiana tła na podstawie wpisanego tekstu</title>
+  <style>
+   body {
+    background-color: white;
+   }
+  </style>
+ </head>
+ <body>
+  <h1>Wpisz "malowanejajca" w polu poniżej</h1>
+  <form>
+   <input type="text" id="input" name="input">
+   <input type="button" value="Sprawdź" onclick="changeBackground()">
+  </form>
+  <script>
+   function changeBackground() {
+    var text = document.getElementById("input").value;
+    if (text === "malowanejajca") {
+     document.body.style.backgroundImage = "url('https://twojestrony.info/wp-content/uploads/2020/03/eggs-1221984_1920.jpg')";
+    } else {
+     alert("Zdrajca!");
+     document.body.style.backgroundImage = "url('https://media.istockphoto.com/id/1201202836/vector/dirty-grunge-hand-drawn-with-brush-strokes-cross-x-vector-illustration-isolated-on-white.jpg?s=612x612&w=0&k=20&c=gt_7zKbzu7yaUhtA10wzTSfIdkdqHrOlNAY65lqYWa8=')";
+    }
+   }
+  </script>
+ </body>
+</html>

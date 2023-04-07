@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Wybór koloru tła i odtwarzanie filmu z YouTube</title>
+  <script>
+   function zmienTlo() {
+    var kolor = document.getElementById("kolor").value;
+    document.body.style.backgroundColor = kolor;
+    if (kolor == "#800080") {
+     document.getElementById("video").style.display = "block";
+    } else {
+     document.getElementById("video").style.display = "none";
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <h1>Wybierz kolor tła:</h1>
+  <input type="color" id="kolor" onchange="zmienTlo()">
+  <br>
+  <br>
+  <div id="video" style="display:none">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/NYAc6RQc2Yw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+ </body>
+</html>

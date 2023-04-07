@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>\^o^/</title>
+ </head>
+ <body>
+  <label for="tekst">Wpisz słowo:</label>
+  <input type="text" id="tekst">
+  <button onclick="skopiuj()">OK</button>
+  <br>
+  <br>
+  <label for="wynik">Skopiowany tekst:</label>
+  <textarea id="wynik" rows="10" cols="50"></textarea>
+  <script>
+   function skopiuj() {
+    // Pobranie tekstu z pola input
+    var tekst = document.getElementById("tekst").value;
+    // Skopiowanie tekstu 1000 razy
+    var wynik = "";
+    for (var i = 1; i <= 1000; i++) {
+     wynik += tekst + "\n";
+    }
+    // Wstawienie skopiowanego tekstu do pola textarea
+    document.getElementById("wynik").value = wynik;
+   }
+  </script>
+ </body>
+</html>
